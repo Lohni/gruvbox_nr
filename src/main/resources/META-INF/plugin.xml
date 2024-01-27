@@ -1,7 +1,7 @@
 <!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
 <idea-plugin>
     <id>com.github.lohni.gruvboxnr</id>
-    <name>gruvbox_nr Template</name>
+    <name>Gruvbox: NoRed</name>
     <vendor>lohni</vendor>
 
     <depends>com.intellij.modules.platform</depends>
@@ -9,10 +9,18 @@
     <resource-bundle>messages.MyBundle</resource-bundle>
 
     <extensions defaultExtensionNs="com.intellij">
-        <toolWindow factoryClass="com.github.lohni.gruvboxnr.toolWindow.MyToolWindowFactory" id="MyToolWindow"/>
-    </extensions>
+        <themeProvider id="com.github.lohni.gruvboxnr.dark.light" path="/theme/gruvbox_nr_dark_light.theme.json"/>
+        <themeProvider id="com.github.lohni.gruvboxnr.dark.medium" path="/theme/gruvbox_nr_dark_medium.theme.json"/>
+        <themeProvider id="com.github.lohni.gruvboxnr.dark.hard" path="/theme/gruvbox_nr_dark_hard.theme.json"/>
+        <themeProvider id="com.github.lohni.gruvboxnr.light.light" path="/theme/gruvbox_nr_light_light.theme.json"/>
+        <themeProvider id="com.github.lohni.gruvboxnr.light.medium" path="/theme/gruvbox_nr_light_medium.theme.json"/>
+        <themeProvider id="com.github.lohni.gruvboxnr.light.hard" path="/theme/gruvbox_nr_light_hard.theme.json"/>
 
-    <applicationListeners>
-        <listener class="com.github.lohni.gruvboxnr.listeners.MyApplicationActivationListener" topic="com.intellij.openapi.application.ApplicationActivationListener"/>
-    </applicationListeners>
+        <themeProvider id="com.github.lohni.gruvboxnr.dark.light" path="/theme/gruvbox_nr_dark_light_editor_only.theme.json"/>
+        <themeProvider id="com.github.lohni.gruvboxnr.dark.medium" path="/theme/gruvbox_nr_dark_medium_editor_only.theme.json"/>
+        <themeProvider id="com.github.lohni.gruvboxnr.dark.hard" path="/theme/gruvbox_nr_dark_hard_editor_only.theme.json"/>
+        <themeProvider id="com.github.lohni.gruvboxnr.light.light" path="/theme/gruvbox_nr_light_light_editor_only.theme.json"/>
+        <themeProvider id="com.github.lohni.gruvboxnr.light.medium" path="/theme/gruvbox_nr_light_medium_editor_only.theme.json"/>
+        <themeProvider id="com.github.lohni.gruvboxnr.light.hard" path="/theme/gruvbox_nr_light_hard_editor_only.theme.json"/>
+    </extensions>
 </idea-plugin>
