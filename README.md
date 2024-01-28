@@ -5,9 +5,9 @@
 [![Downloads](https://img.shields.io/jetbrains/plugin/d/com.github.lohni.gruvboxnr.svg)](https://plugins.jetbrains.com/plugin/PLUGIN_ID)
 
 <!-- Plugin description -->
-Theme inspired/forked from the well loved Gruvbox plugin https://plugins.jetbrains.com/plugin/12310-gruvbox-theme, but using violet instead of red as one of the main colors.
+Theme inspired/forked from the well-loved Gruvbox plugin https://plugins.jetbrains.com/plugin/12310-gruvbox-theme, but using violet instead of red as one of the main colors.
 
-You can choose between light/dark mode in three different variations. The Editor-Only themes only apply the theme to the editor, everything else is defaulted to the dracula scheme.
+You can choose between light/dark mode in three different variations and the option to only change the look of the editor.
 <!-- Plugin description end -->
 
 ## Installation
