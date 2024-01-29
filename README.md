@@ -1,8 +1,8 @@
 # Gruvbox: NoRed
 
 ![Build](https://github.com/Lohni/gruvbox_nr/workflows/Build/badge.svg)
-[![Version](https://img.shields.io/jetbrains/plugin/v/com.github.lohni.gruvboxnr.svg)](com.github.lohni.gruvboxnr)
-[![Downloads](https://img.shields.io/jetbrains/plugin/d/com.github.lohni.gruvboxnr.svg)](https://plugins.jetbrains.com/plugin/PLUGIN_ID)
+[![Version](https://img.shields.io/jetbrains/plugin/v/23675-gruvbox-nored.svg)]([com.github.lohni.gruvboxnr](https://plugins.jetbrains.com/plugin/23675-gruvbox-nored))
+[![Downloads](https://img.shields.io/jetbrains/plugin/d/23675-gruvbox-nored.svg)]([https://plugins.jetbrains.com/plugin/PLUGIN_ID](https://plugins.jetbrains.com/plugin/23675-gruvbox-nored))
 
 <!-- Plugin description -->
 Theme inspired/forked from the well-loved Gruvbox plugin https://plugins.jetbrains.com/plugin/12310-gruvbox-theme, but using violet instead of red as one of the main colors.
