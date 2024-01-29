@@ -9,9 +9,8 @@ on:
 
 jobs:
 
-  # Prepare and publish the plugin to JetBrains Marketplace repository
   release:
-    name: Publish Plugin
+    name: Create Plugin release
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -59,14 +58,9 @@ jobs:
         run: |
           ./gradlew patchChangelog --release-note="$CHANGELOG"
 
-      # Publish the plugin to JetBrains Marketplace
-      - name: Publish Plugin
-        env:
-          PUBLISH_TOKEN: ${{ secrets.PUBLISH_TOKEN }}
-          CERTIFICATE_CHAIN: ${{ secrets.CERTIFICATE_CHAIN }}
-          PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
-          PRIVATE_KEY_PASSWORD: ${{ secrets.PRIVATE_KEY_PASSWORD }}
-        run: ./gradlew publishPlugin
+      # Build plugin
+      - name: Build plugin
+        run: ./gradlew buildPlugin
 
       # Upload artifact as a release asset
       - name: Upload Release Asset
