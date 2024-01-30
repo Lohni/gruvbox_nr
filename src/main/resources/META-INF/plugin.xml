@@ -5,6 +5,7 @@
     <vendor>Lohni</vendor>
 
     <depends>com.intellij.modules.platform</depends>
+    <depends>com.intellij.modules.lang</depends>
 
     <extensions defaultExtensionNs="com.intellij">
         <themeProvider id="com.github.lohni.gruvboxnr.dark.light" path="/theme/gruvbox_nr_dark_light.theme.json"/>
