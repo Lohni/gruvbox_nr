@@ -1,4 +1,4 @@
-<scheme name="Gruvbox: NoRed Light Medium" version="1" parent_scheme="Darcula">
+<scheme name="Gruvbox: NoRed Light Medium" version="2" parent_scheme="Default">
     <colors>
         <option name="ADDED_LINES_COLOR" value="b8bb26" />
         <option name="ANNOTATIONS_COLOR" value="928374" />
