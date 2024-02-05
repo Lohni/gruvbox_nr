@@ -40,6 +40,7 @@
         <option name="ScrollBar.thumbBorderColor" value="50494588"/>
         <option name="ScrollBar.thumbColor" value="50494588"/>
         <option name="ScrollBar.trackColor" value=""/>
+        <option name="TAB_UNDERLINE" value="83a598"/>
         <option name="TEARLINE_COLOR" value="665c54"/>
     </colors>
     <attributes>
@@ -949,6 +950,11 @@
         <option name="STATIC_METHOD_ATTRIBUTES">
             <value>
                 <option name="FOREGROUND" value="b8bb26"/>
+            </value>
+        </option>
+        <option name="TAB_SELECTED">
+            <value>
+                <option name="BACKGROUND" value="2F3636" />
             </value>
         </option>
         <option name="TEMPLATE_VARIABLE_ATTRIBUTES">

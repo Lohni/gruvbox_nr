@@ -39,6 +39,7 @@
         <option name="ScrollBar.Mac.Transparent.hoverTrackColor" value="fbf1c7"/>
         <option name="ScrollBar.Mac.Transparent.hoverThumbColor" value="ebdbb2"/>
         <option name="ScrollBar.Mac.Transparent.hoverThumbBorderColor" value="ebdbb2"/>
+        <option name="TAB_UNDERLINE" value="076678"/>
     </colors>
     <attributes>
         <option name="ABSTRACT_CLASS_NAME_ATTRIBUTES">
@@ -420,7 +421,7 @@
         </option>
         <option name="DEFAULT_OPERATION_SIGN">
             <value>
-                <option name="FOREGROUND" value="6ECDA9" />
+                <option name="FOREGROUND" value="21AA7E" />
             </value>
         </option>
         <option name="DEFAULT_PARAMETER">
@@ -960,6 +961,11 @@
         <option name="STATIC_METHOD_ATTRIBUTES">
             <value>
                 <option name="FOREGROUND" value="79740e" />
+            </value>
+        </option>
+        <option name="TAB_SELECTED">
+            <value>
+                <option name="BACKGROUND" value="ebdbb2" />
             </value>
         </option>
         <option name="TEMPLATE_VARIABLE_ATTRIBUTES">
