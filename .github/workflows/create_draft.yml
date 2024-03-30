@@ -36,8 +36,8 @@ jobs:
         run: |
           set +e
           LOG_SINCE="HEAD"
-          LATEST_TAG="$(git describe --tags)"
-          if [[ exitcode == 0 ]]
+          LATEST_TAG="$(git describe --tags --abbrev=0)"
+          if [[ -n "$LATEST_TAG" ]]
           then
             LOG_SINCE="$LATEST_TAG..HEAD"
           fi
