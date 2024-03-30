@@ -1,0 +1,57 @@
+# Create a draft release
+name: Create draft release
+on:
+  workflow_call:
+    inputs:
+      current_version:
+        required: true
+        type: string
+
+jobs:
+  releaseDraft:
+    name: Create draft release
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      # Check out current repository with whole history for draft template
+      - name: Fetch Sources
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      # Remove old release drafts by using the curl request for the available releases with a draft flag
+      - name: Remove Old Release Drafts
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh api repos/{owner}/{repo}/releases \
+          --jq '.[] | select(.draft == true) | .id' \
+          | xargs -I '{}' gh api -X DELETE repos/{owner}/{repo}/releases/{}
+
+      # Generates changelog from commits since last tag
+      - name: Create Release Draft
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set +e
+          LOG_SINCE="HEAD"
+          LATEST_TAG="$(git describe --tags)"
+          if [[ exitcode == 0 ]]
+          then
+            LOG_SINCE="$LATEST_TAG..HEAD"
+          fi
+          
+          CHANGES="### Added
+          $(git log $LOG_SINCE --oneline | cut -c 8- | xargs -I {} echo '- {}')"
+          
+          if [[ -z "$CHANGES" ]]
+          then
+            CHANGES="### Added
+            TODO"
+          fi 
+          
+          gh release create draft \
+            --draft \
+            --title "v${{ inputs.current_version }}" \
+            --notes "$CHANGES"

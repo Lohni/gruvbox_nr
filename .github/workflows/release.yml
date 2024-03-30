@@ -1,0 +1,63 @@
+# Run when a release commit is successfully built in the main branch
+name: Release draft and upload asset
+on:
+  workflow_call:
+
+jobs:
+  handle_release_workflow:
+    name: Release draft
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+
+      # Check out repository
+      - name: Fetch Sources
+        uses: actions/checkout@v4
+
+      # Java Env
+      - name: Setup Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: zulu
+          java-version: 17
+
+      # Setup Gradle
+      - name: Setup Gradle
+        uses: gradle/gradle-build-action@v2
+        with:
+          gradle-home-cache-cleanup: true
+
+      # Get Release Tag from Draft
+      - name: Export properties
+        id: properties
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        shell: bash
+        run: |
+          RELEASE_TAG="$(gh api repos/{owner}/{repo}/releases \
+          --jq '.[] | select(.draft == true) | .tag_name' )"
+          
+          echo "release_tag=$RELEASE_TAG" >> $GITHUB_OUTPUT
+
+      # Build plugin
+      - name: Build plugin
+        run: ./gradlew buildPlugin
+
+      # Release current draft release
+      # https://cli.github.com/manual/gh_release_edit
+      - name: Release Draft
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        shell: bash
+        run: |
+          gh release edit ${{ steps.properties.outputs.release_tag }} \
+            --draft=false \
+            --latest \
+            --verify-tag
+
+      # Upload artifact as a release asset
+      - name: Upload Release Asset
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh release upload ${{ steps.properties.outputs.release_tag }} ./build/distributions/*

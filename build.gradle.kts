@@ -49,6 +49,20 @@ changelog {
     repositoryUrl = properties("pluginRepositoryUrl")
 }
 
+tasks.register("patchVersion") {
+    this.notCompatibleWithConfigurationCache("")
+    doLast {
+        val newVersion: String = findProperty("newVersion").toString()
+        val oldVersion: String = findProperty("version").toString()
+
+        if (newVersion.isEmpty()) throw Exception()
+
+        println("Bumping from $oldVersion to $newVersion")
+
+        val updatedProperties = projectDir.resolve("gradle.properties").readText().replaceFirst("pluginVersion = $oldVersion","pluginVersion = $newVersion" )
+        projectDir.resolve("gradle.properties").writeText(updatedProperties)
+    }
+}
 
 tasks {
     wrapper {
