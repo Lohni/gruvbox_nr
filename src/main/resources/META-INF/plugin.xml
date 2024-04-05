@@ -14,12 +14,5 @@
         <themeProvider id="com.github.lohni.gruvboxnr.light.light" path="/theme/gruvbox_nr_light_light.theme.json"/>
         <themeProvider id="com.github.lohni.gruvboxnr.light.medium" path="/theme/gruvbox_nr_light_medium.theme.json"/>
         <themeProvider id="com.github.lohni.gruvboxnr.light.hard" path="/theme/gruvbox_nr_light_hard.theme.json"/>
-
-        <themeProvider id="com.github.lohni.gruvboxnr.dark.light.editor.only" path="/theme/gruvbox_nr_dark_light_editor_only.theme.json"/>
-        <themeProvider id="com.github.lohni.gruvboxnr.dark.medium.editor.only" path="/theme/gruvbox_nr_dark_medium_editor_only.theme.json"/>
-        <themeProvider id="com.github.lohni.gruvboxnr.dark.hard.editor.only" path="/theme/gruvbox_nr_dark_hard_editor_only.theme.json"/>
-        <themeProvider id="com.github.lohni.gruvboxnr.light.light.editor.only" path="/theme/gruvbox_nr_light_light_editor_only.theme.json"/>
-        <themeProvider id="com.github.lohni.gruvboxnr.light.medium.editor.only" path="/theme/gruvbox_nr_light_medium_editor_only.theme.json"/>
-        <themeProvider id="com.github.lohni.gruvboxnr.light.hard.editor.only" path="/theme/gruvbox_nr_light_hard_editor_only.theme.json"/>
     </extensions>
 </idea-plugin>
