@@ -1,4 +1,4 @@
-<scheme name="Gruvbox: NoRed Light Medium" version="2" parent_scheme="Default">
+<scheme name="Gruvbox: NoRed Light Medium" version="3" parent_scheme="Default">
     <colors>
         <option name="ADDED_LINES_COLOR" value="b8bb26" />
         <option name="ANNOTATIONS_COLOR" value="928374" />
@@ -510,6 +510,11 @@
                 <option name="EFFECT_COLOR" value="9d0006" />
                 <option name="ERROR_STRIPE_COLOR" value="9d0006" />
                 <option name="EFFECT_TYPE" value="2" />
+            </value>
+        </option>
+        <option name="EXECUTIONPOINT_ATTRIBUTES">
+            <value>
+                <option name="BACKGROUND" value="DABDE0" />
             </value>
         </option>
         <option name="FOLDED_TEXT_ATTRIBUTES">
