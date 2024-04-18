@@ -4,6 +4,19 @@
 
 ## [Unreleased]
 
+## [1.1.0] - 2024-04-18
+
+### Added
+
+- ajdust python colors
+
+   - Class / type annotations
+   - Function definition
+   - Predifined definition/usage
+   - `self` parameter
+
+![screenshot](https://plugins.jetbrains.com/files/23675/screenshot_f8cd0d5b-b9c0-452d-88d8-71aa46ff910f)
+
 ## [1.0.0] - 2024-04-05
 
 ### Removed
@@ -40,7 +53,8 @@
 
 - Initial plugin config
 
-[Unreleased]: https://github.com/Lohni/gruvbox_nr/compare/v1.0.0...HEAD
+[Unreleased]: https://github.com/Lohni/gruvbox_nr/compare/v1.1.0...HEAD
+[1.1.0]: https://github.com/Lohni/gruvbox_nr/compare/v1.0.0...v1.1.0
 [1.0.0]: https://github.com/Lohni/gruvbox_nr/compare/v0.2.0...v1.0.0
 [0.2.0]: https://github.com/Lohni/gruvbox_nr/compare/v0.1.2...v0.2.0
 [0.1.2]: https://github.com/Lohni/gruvbox_nr/compare/v0.1.1...v0.1.2
