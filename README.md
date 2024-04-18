@@ -15,7 +15,7 @@ To do this, got to:
 <!-- Plugin description end -->
 
 ![screenshot](https://plugins.jetbrains.com/files/23675/screenshot_aa2be24b-f9d3-47ec-a1ec-f2754765407c)
-![screenshot](https://plugins.jetbrains.com/files/23675/screenshot_20638ce0-43d8-4376-b295-d8a483919bf7)
+![screenshot](https://plugins.jetbrains.com/files/23675/screenshot_f8cd0d5b-b9c0-452d-88d8-71aa46ff910f)
 
 ## Installation
 
