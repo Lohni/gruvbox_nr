@@ -115,6 +115,7 @@ jobs:
         run: |
           echo ${{ needs.build.outputs.pluginVerifierHomeDir }}
           du * -sch "$AGENT_TOOLSDIRECTORY"
+          du * -sch /home/runner
           df -h
 
       # Cache Plugin Verifier IDEs
