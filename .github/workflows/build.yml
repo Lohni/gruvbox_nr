@@ -111,7 +111,7 @@ jobs:
         with:
           gradle-home-cache-cleanup: true
 
-      - name: Disk lookup
+      - name: Disk space lookup
         run: |
           df -h
 
