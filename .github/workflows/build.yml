@@ -111,10 +111,10 @@ jobs:
         with:
           gradle-home-cache-cleanup: true
 
-      - name: Memory lookup
+      - name: Disk lookup
         run: |
           echo ${{ needs.build.outputs.pluginVerifierHomeDir }}
-          du * -sch ~
+          du * -sch /home/runner/.pluginVerifier/home/runner
           df -h
 
       # Cache Plugin Verifier IDEs
