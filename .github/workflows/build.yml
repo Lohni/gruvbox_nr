@@ -113,8 +113,9 @@ jobs:
 
       - name: Memory lookup
         run: |
+          echo ${{ needs.build.outputs.pluginVerifierHomeDir }}
+          echo ~
           df -h
-          echo "$ df -h /"
 
       # Cache Plugin Verifier IDEs
       - name: Setup Plugin Verifier IDEs Cache
