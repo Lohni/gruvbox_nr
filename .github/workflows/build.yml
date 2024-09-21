@@ -114,7 +114,7 @@ jobs:
       - name: Disk lookup
         run: |
           echo ${{ needs.build.outputs.pluginVerifierHomeDir }}
-          du * -sch /home/runner
+          ls -liart
           df -h
 
       # Cache Plugin Verifier IDEs
