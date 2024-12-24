@@ -4,6 +4,12 @@
 
 ## [Unreleased]
 
+## [1.4.0] - 2024-12-24
+
+### Added
+
+- fix template language highlighting
+
 ## [1.3.0] - 2024-11-15
 
 ### Added
@@ -63,7 +69,8 @@
 
 - Initial plugin config
 
-[Unreleased]: https://github.com/Lohni/gruvbox_nr/compare/v1.3.0...HEAD
+[Unreleased]: https://github.com/Lohni/gruvbox_nr/compare/v1.4.0...HEAD
+[1.4.0]: https://github.com/Lohni/gruvbox_nr/compare/v1.3.0...v1.4.0
 [1.3.0]: https://github.com/Lohni/gruvbox_nr/compare/v1.2.0...v1.3.0
 [1.2.0]: https://github.com/Lohni/gruvbox_nr/compare/v1.1.0...v1.2.0
 [1.1.0]: https://github.com/Lohni/gruvbox_nr/compare/v1.0.0...v1.1.0
